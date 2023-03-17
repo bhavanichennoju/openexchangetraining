@@ -1,0 +1,25 @@
+package com.wavelabs;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootTrainingProjectApplication {
+
+	public static void main(String[] args) {
+		/*
+		 * Using static SpringApplication.run method.
+		 */
+		//SpringApplication.run(SpringBootTrainingProjectApplication.class, args);
+		
+		/*
+		 * By creating the SpringApplication object using constructor and configuring it manually.
+		 */
+		//SpringApplication application = new SpringApplication(SpringBootTrainingProjectApplication.class);
+	 //   application.run(args);
+	   /*
+	    *  
+	    */
+	}
+
+}

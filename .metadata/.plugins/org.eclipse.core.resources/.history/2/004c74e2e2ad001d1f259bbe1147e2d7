@@ -1,0 +1,32 @@
+package com.date;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class DateTimeExample {
+
+	public static void main(String[] args) {
+		/*
+		 * Display Current Time
+		 */
+		System.out.println(LocalDate.now());
+		/*
+		 * Display Current Date and Time
+		 */
+		System.out.println(LocalDateTime.now());
+		/*
+		 * Formatting Date and Time
+		 */
+		 LocalDateTime myDateObj = LocalDateTime.now();
+		 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
+		 System.out.println(myDateObj.format(myFormatObj));
+		 /*
+		  *  snippet gets the current local date and adds one day:
+		  */
+		 LocalDate tomorrow = LocalDate.now().plusDays(1);
+		 System.out.println(tomorrow);
+
+	}
+
+}

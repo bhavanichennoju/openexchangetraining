@@ -1,0 +1,28 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MapAndFlatMapExample {
+
+	 public static void main(String[] args)
+	      {
+	         ArrayList<String> country = new ArrayList<>();
+	         country.add("Poland");
+	         country.add("India");
+	         country.add("Australia");
+	        country.add("Uganda");
+	         country.add("China");
+	         country.add("USA");
+	         country.add("Turkey");
+	          System.out.println("List of Countries : " + country);
+	  
+        // Now map() is used to transform the list of countries
+	        List list = country.stream()
+	                     .map(s -> s.toUpperCase())
+	                  .collect(Collectors.toList());
+	         System.out.println("Transformed list : " + list);
+	     }
+
+}

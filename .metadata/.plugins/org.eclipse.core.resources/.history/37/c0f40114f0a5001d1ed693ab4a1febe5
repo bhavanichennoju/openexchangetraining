@@ -1,0 +1,37 @@
+package com.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Repository {
+	private List<Employee> list = new ArrayList<Employee>();
+	
+	 public void createEmployee() {
+	        list = List.of(
+	        		new Employee(1, "EmployeeOne", "9999999999", "Bhongir",23,20000,"Active" ),
+	        		new Employee(1, "EmployeeSecond", "8888888888", "Hitech",23,25000,"InActive" ),
+	        		new Employee(1, "EmployeeThird", "7777777777", "nacharam",24,23000 ,"Active"),
+	        		new Employee(1, "EmployeeFouth", "9999988888", "nagole",23,25000,"InActive" ),
+	        		new Employee(1, "EmployeeFive", "8888899999", "Bhongir",24,25000,"InActive" ),
+	        		new Employee(1, "EmployeeSix", "7777788888", "nacharam",24,25000,"Active" ),
+	        		new Employee(1, "EmployeeSeven", "7777788801", "Bhongir",24,24000,"Active" ),
+	        		new Employee(1, "EmployeeEight", "7777788802", "Hitech",24,25000,"Active" ),
+	        		new Employee(1, "EmployeeNine", "7777788803", "nagole",24,24000,"Active" ),
+	        		new Employee(1, "EmployeeTen", "7777788804", "madhupur",24,27000,"Active" ));
+	        		
+	    }
+	 
+	 public List<Employee> list(){
+		 return list;
+	 }
+	 public Employee findById(int id) {
+		 for (int i = 0; i < list.size(); i++) {
+	            if (list.get(i).getId() == (id)) {
+	                return list.get(i);
+	            }
+	        }
+	        return null;
+	    }
+
+
+}

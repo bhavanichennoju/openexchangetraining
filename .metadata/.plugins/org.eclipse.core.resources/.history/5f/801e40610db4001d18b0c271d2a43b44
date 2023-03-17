@@ -1,0 +1,49 @@
+package com.wavelabs.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class User  {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name = "native", strategy = "native")
+	@Column(name = "ID")
+	private long id;
+
+	@Column(name = "created_time")
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_time")
+	private LocalDateTime updatedAt;
+	@Column(name = "firstName")
+	private String firstName;
+
+	@Column(name = "lastName")
+	private String lastName;
+
+	@Column(name = "email")
+	private String email;
+	@Column(name = "password")
+	private String password;
+
+	@Column(name = "mobile_number")
+	private String mobileNumber;
+
+	@Column(name = "status")
+	private Status status;
+
+	@Column(name = "gender")
+	private Gender gender;
+
+
+}

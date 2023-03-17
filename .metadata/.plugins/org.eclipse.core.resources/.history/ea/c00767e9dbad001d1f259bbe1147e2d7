@@ -1,0 +1,37 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class MapAndFlatMapExample {
+
+	 public static void main(String[] args)
+	      {
+	         ArrayList<String> country = new ArrayList<>();
+	         country.add("Poland");
+	         country.add("India");
+	         country.add("Australia");
+	        country.add("Uganda");
+	         country.add("China");
+	         country.add("USA");
+	         country.add("Turkey");
+	          System.out.println("List of Countries : " + country);
+	  
+        // Now map() is used to transform the list of countries
+	        List list = country.stream()
+	                     .map(s -> s.toUpperCase())
+	                  .collect(Collectors.toList());
+	         System.out.println("Transformed list : " + list);
+	         List<String> list1 = Arrays.asList("5.6", "7.4", "4",
+                     "1", "2.3");
+
+                   list1.stream().flatMap(num -> Stream.of(num)).
+    forEach(System.out::println);
+}
+	     }
+	
+	 
+}

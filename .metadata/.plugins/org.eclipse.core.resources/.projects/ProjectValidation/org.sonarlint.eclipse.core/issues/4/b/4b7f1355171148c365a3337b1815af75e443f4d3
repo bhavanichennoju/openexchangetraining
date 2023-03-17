@@ -1,0 +1,13 @@
+
+f
+java:S1128":Remove this unused import 'javax.persistence.CascadeType'.( ì¤ÊH·8RMINORZ
+CODE_SMELL
+e
+java:S1128"9Remove this unused import 'javax.persistence.JoinColumn'.(´Å¼áH¹8RMINORZ
+CODE_SMELL
+i
+java:S1128"8Remove this unused import 'javax.persistence.ManyToOne'.(ÇÑ²ŽøÿÿÿÿH»8RMINORZ
+CODE_SMELL
+c
+java:S1128"7Remove this unused import 'javax.persistence.OneToOne'.(Ø½ïâH½8RMINORZ
+CODE_SMELL

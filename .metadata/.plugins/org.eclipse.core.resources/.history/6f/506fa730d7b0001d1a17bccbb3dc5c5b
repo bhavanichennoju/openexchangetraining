@@ -1,0 +1,10 @@
+package com.predicatechain;
+
+public class ChainExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.wavelabs.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.wavelabs.entity.Employee;
+import com.wavelabs.entity.User;
+
+@Repository
+public interface UserRepository extends  JpaRepository<User, Long>{
+	
+
+	Optional<Employee> findByEmailId(String email);
+	
+	@Query( value = "select * from Employee employee INNER JOIN Address address ON employee.address_id =address.id where city=:city ", nativeQuery = true)
+	List<Employee> findByEmployeeAddress(String city);
+
+	Optional<Employee> findByMobileNumber(String mobileNumber);
+
+	
+	@Query(value="SELECT e.name,d.department_name FROM employee e join department d where e.dept_id= d.id  ",nativeQuery = true)
+	List<Object> groupEmployeeByDepartmentName();
+
+
+
+
+}

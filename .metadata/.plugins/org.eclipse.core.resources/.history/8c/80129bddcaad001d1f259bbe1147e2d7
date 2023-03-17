@@ -1,0 +1,16 @@
+
+public class StringMethodExample {
+
+	public static void main(String[] args) {
+	String str="E";
+	
+	System.out.println(str.length());//length of string
+	System.out.println(str.charAt(5));//at index 5 which letter will be printed
+	/*
+	 * ompare two strings lexicographically 
+	 */
+	System.out.println(str.compareTo("e"));
+
+	}
+
+}

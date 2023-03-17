@@ -1,0 +1,7 @@
+package com.examples;
+
+public enum Level {
+    HIGH,
+    MEDIUM,
+    LOW
+}

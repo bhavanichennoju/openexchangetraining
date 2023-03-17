@@ -1,0 +1,49 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class StringMethodExample {
+
+	public static void main(String[] args) {
+		String str = "Education";
+		String str1 = "educate";
+
+		System.out.println(str.length());// length of string
+		// System.out.println(str.charAt(5));//at index 5 which letter will be printed
+		/*
+		 * compare two strings lexicographically
+		 */
+		System.out.println(str.compareTo("education"));
+		System.out.println(str.compareToIgnoreCase("education"));
+		System.out.println(str.concat(str));// Concatenates the specified string to the end of this string.
+		System.out.println(str.contains("d"));
+		System.out.println(str.charAt(3));
+		String url = "https://www.w3schools.com/java/ref_string_indexof.asp";
+		/*
+		 * /* the position of the first occurrence of specified character(s) in a
+		 * string.
+		 */
+		String myStr = "Hello ...everyone";
+		System.out.println(myStr.indexOf('e', 6));
+		System.out.println(str.equals(str1));
+		System.out.println(str.format("This is %s", "bhavani"));
+		int i = url.indexOf(":");
+		System.out.println(url.substring(0, i));
+		 String message = "Studyopedia-provides-free-learning content!";   
+		 String[] newStr=message.split("-");
+		 for(String ms:newStr)
+		 System.out.println(ms);
+		 /*
+		  * convert string to char
+		  */
+		 char[] l = str.toCharArray();
+		 String a=Arrays.toString(l);
+		 System.out.println(a)
+		 char[] ch = {'w', 'e', 'l', 'c', 'o', 'm', 'e', ' ' , 't', 'o', ' ', 'J', 'a', 'v', 'a', 't', 'p', 'o', 'i', 'n', 't'};  ;
+		 String string = new String(ch);  
+		//prints the string  
+		System.out.println(string);  
+		}  
+
+	}
+
+

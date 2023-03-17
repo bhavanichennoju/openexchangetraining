@@ -1,0 +1,13 @@
+package com.date;
+
+import java.time.LocalDate;
+
+public class DateTimeExample {
+
+	public static void main(String[] args) {
+	//	Display Current Time
+		System.out.println(LocalDate.now());
+
+	}
+
+}

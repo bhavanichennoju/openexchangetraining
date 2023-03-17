@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringBootTrainingProject/src/main/resources/banner&apos; to &apos;banner.txt&apos;" description="Rename resource &apos;banner&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/banner" name="banner.txt" stamp="1676960281996" updateReferences="true"/>
+</session>

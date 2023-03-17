@@ -1,0 +1,12 @@
+package com.testing;
+
+public class Example {
+	public static void main(String[] args) {        
+		String str = "bhavani";     
+		   if (str instanceof String) {       
+			     System.out.println("String class");       
+			   }        else {      
+				      System.out.println("not string class");   
+				     }  
+		  }
+}

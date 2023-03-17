@@ -1,0 +1,91 @@
+package com.examples;
+
+import java.util.Scanner;
+
+public class FibExample {
+
+	public static void main(String[] args) {
+		// 0 1 1 2 3 5 8...
+		int n = 10, a = 0, b = 0, c = 1;
+		System.out.print("Fibonacci Series:");
+		for (int i = 1; i <= n; i++) {
+			a = b;
+			b = c;
+			c = a + b;
+			System.out.print(a + " ");
+		}
+
+//prime numbers 
+		System.out.println("...........");
+		System.out.println("prime number program");
+		int p1 = 1;
+		int count = 0;
+		for (int i = 1; i < p1 / 2; i++) {
+			if (p1 % 2 == 0) {
+				count++;
+			}
+		}
+		if (count == 0) {
+			System.out.println("prime numbers");
+		} else {
+			System.out.println("not prime numbers");
+		}
+
+		// prime numbers 2,3,5,7,9...
+		System.out.println("prime number program 1-10");
+		for (int i = 1; i <= 10; i++) {
+			int count1 = 0;
+			for (int j = 2; j <= i / 2; j++) {
+				if (i % j == 0) {
+					count1++;
+					break;
+				}
+			}
+
+			if (count1 == 0) {
+				System.out.print(i + " ");
+			}
+
+		}
+//		System.out.println("swaping program");
+//		String a1 = "hello";
+//		String b1 = "java";
+//		String c1;
+//		System.out.println("before swap " + a1 + "  " + b1);
+//		c1 = a1;
+//		a1 = b1;
+//		b1 = c1;
+//		System.out.println("after swap " + a1 + "  " + b1);
+
+		String os = "madama";
+		String rev = "";
+		for (int i = os.length() - 1; i >= 0; i--) {
+			rev = rev + os.charAt(i);
+		}
+		if (os.equals(rev)) {
+			System.out.println("p");
+			;
+		} else {
+			System.out.println("not");
+		}
+
+		StringBuffer sb = new StringBuffer("hello");
+		StringBuffer rev1 = sb.reverse();
+		if (sb == rev1) {
+			System.out.println("p");
+			;
+		} else {
+			System.out.println("not");
+		}
+
+		
+		int i=12345;
+		int r=0;
+		while(i!=0) {
+			r=r*10+i%10;//0*10+12345%5;
+			i=i/10;
+			
+		}
+		System.out.println(r);
+	}
+}

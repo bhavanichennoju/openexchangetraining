@@ -1,0 +1,21 @@
+package com.wavelabs.feign.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ConsumerControllerClient {
+
+	@Autowired
+	private RemoteCallService loadBalancer;
+
+	public void getEmployee() throws RestClientException, IOException {
+
+		try {
+			Employee emp = loadBalancer.getData();
+			System.out.println(emp.getEmpId());
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}
+	}
+
+}

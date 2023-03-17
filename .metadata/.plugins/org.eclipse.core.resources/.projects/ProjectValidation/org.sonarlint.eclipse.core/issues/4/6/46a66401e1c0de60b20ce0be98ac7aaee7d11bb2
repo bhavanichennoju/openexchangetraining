@@ -1,0 +1,15 @@
+
+g	java:S125r"<This block of commented-out lines of code should be removed.(µ¯å—H­8RMAJORZ
+CODE_SMELL
+f
+java:S1128":Remove this unused import 'javax.persistence.CascadeType'.( ì¤ÊH¯8RMINORZ
+CODE_SMELL
+e
+java:S1128"9Remove this unused import 'javax.persistence.JoinColumn'.(´Å¼áH±8RMINORZ
+CODE_SMELL
+i
+java:S1128"8Remove this unused import 'javax.persistence.ManyToOne'.(ÇÑ²øÿÿÿÿH³8RMINORZ
+CODE_SMELL
+c
+java:S1128"7Remove this unused import 'javax.persistence.OneToOne'.(Ø½ïâHµ8RMINORZ
+CODE_SMELL

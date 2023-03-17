@@ -1,0 +1,10 @@
+package com.wavelabs.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="user-producer")
+public interface RemoteCallService {
+	@RequestMapping(method=RequestMethod.GET, value="/employee")
+	public Employee getData();
+
+}

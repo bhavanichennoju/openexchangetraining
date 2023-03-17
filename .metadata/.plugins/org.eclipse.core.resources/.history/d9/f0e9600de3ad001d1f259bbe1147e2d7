@@ -1,0 +1,40 @@
+package com.date;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Year;
+import java.time.format.DateTimeFormatter;
+
+public class DateTimeExample {
+
+	public static void main(String[] args) {
+		/*
+		 * Display Current Time
+		 */
+		LocalDate currentTime=LocalDate.now();
+		System.out.println(currentTime);
+		/*
+		 * Display Current Date and Time
+		 */
+		 Month month = currentTime.getMonth();
+	      int day = currentTime.getDayOfMonth();
+	      int year=currentTime.getDayOfYear();
+			
+	      System.out.println("Month: " + month +"day: " + day +"year" +year);
+		System.out.println(LocalDateTime.now());
+		/*
+		 * Formatting Date and Time
+		 */
+		 LocalDateTime myDateObj = LocalDateTime.now();
+		 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
+		 System.out.println(myDateObj.format(myFormatObj));
+		 /*
+		  *  snippet gets the current local date and adds one day:
+		  */
+		 LocalDate tomorrow = LocalDate.now().plusDays(1);
+		 System.out.println(tomorrow);
+
+	}
+
+}

@@ -1,0 +1,89 @@
+package com.wavelabs.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wavelabs.constants.Constants;
+import com.wavelabs.entity.Address;
+import com.wavelabs.entity.Department;
+import com.wavelabs.entity.Employee;
+import com.wavelabs.entity.User;
+import com.wavelabs.exception.RecordNotfoundException;
+import com.wavelabs.exception.BadRequestException;
+import com.wavelabs.repository.AddressRepository;
+import com.wavelabs.repository.DepartmentRepository;
+import com.wavelabs.repository.EmployeeRepository;
+import com.wavelabs.repository.UserRepository;
+import com.wavelabs.request.CreateEmployeeRequest;
+import com.wavelabs.request.CreateUserRequest;
+import com.wavelabs.response.Response;;
+
+@Service
+public class EmployeeService {
+
+	@Autowired
+	UserRepository userRepo;
+	
+	
+	public User createUser(CreateUserRequest request) {
+		Optional<User> optionalUser = userRepo.findByEmail(request.getEmail());
+		if (optionalUser.isPresent()) {
+			throw new BadRequestException("exception");
+		}
+		Optional<User> emp = userRepo.findByMobileNumber(request.getMobileNumber());
+		if (emp.isPresent()) {
+			throw new BadRequestException(Constants.MOBILE_ALREADY_EXIST);
+		}
+		User user=null;
+		user=Mapper.createUser(request,user);
+	
+		userRepo.save(user);
+		
+		return user;
+		
+		
+		
+	}
+		
+		
+		
+	}
+	
+	
+	public List<Employee> getAllEmployees(){
+		List<Employee> getList= employeeRepository.findAll();
+		if(getList.size()==0) {
+			throw new RecordNotfoundException(Constants.NO_RECORD_FOUND);
+		}
+		return getList;
+	}
+	
+	
+	public Employee getEmployeeByEmail(String email){
+		Optional<Employee> getEmployee= employeeRepository.findByEmailId(email);
+		if(getEmployee.isEmpty()) {
+			throw new RecordNotfoundException(Constants.NO_RECORD_FOUND);
+		}
+		return getEmployee.get();
+	}
+	
+	public List<Employee> getAllEmployeesByCity(String city){
+	List<Employee> list=employeeRepository.findByEmployeeAddress(city);
+		if(list.size()==0) {
+			throw new RecordNotfoundException(Constants.NO_RECORD_FOUND);
+		}
+		return list;
+	}
+	
+	public List<Object> groupEmployeeByDepartment() {
+		return employeeRepository.groupEmployeeByDepartmentName();
+		
+	}
+
+
+
+}

@@ -1,0 +1,22 @@
+
+public class StringMethodExample {
+
+	public static void main(String[] args) {
+	String str="Education";
+	
+	System.out.println(str.length());//length of string
+	//System.out.println(str.charAt(5));//at index 5 which letter will be printed
+	/*
+	 * compare two strings lexicographically 
+	 */
+	System.out.println(str.compareTo("education"));
+	System.out.println(str.compareToIgnoreCase("education"));
+	System.out.println(str.concat(str));//Concatenates the specified string to the end of this string.
+	System.out.println(str.contains("d"));
+	String  url="https://www.w3schools.com/java/ref_string_indexof.asp";
+	String myStr = "Hello planet earth, you are a great planet.";
+	System.out.println(myStr.indexOf("lanet"));
+
+	}
+
+}

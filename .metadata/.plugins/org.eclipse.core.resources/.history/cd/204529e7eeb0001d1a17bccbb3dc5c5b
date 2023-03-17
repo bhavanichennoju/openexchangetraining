@@ -1,0 +1,6 @@
+package com.examples;
+
+public enum Gender {
+	
+
+}

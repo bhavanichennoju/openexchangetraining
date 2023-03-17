@@ -1,0 +1,10 @@
+
+server.port                         = 9090
+
+keycloak.realm                      = Demo-Realm
+keycloak.auth-server-url            = http://localhost:8080/auth
+keycloak.ssl-required               = external
+keycloak.resource                   = springboot-microservice
+keycloak.credentials.secret         = MW6sflNNJtg0jpiw3fyAYB3XUo0RzWl7
+keycloak.use-resource-role-mappings = true
+keycloak.bearer-only                = true

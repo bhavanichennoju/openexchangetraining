@@ -1,0 +1,5 @@
+package com.wavelabs.aop.aspect;
+
+public class customAnno {
+
+}
